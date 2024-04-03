@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GMSANK</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sankey Diagram</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['sankey']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'From');
+            data.addColumn('string', 'To');
+            data.addColumn('number', 'Weight');
+            data.addColumn({type: 'string', role: 'tooltip'});
+            data.addRows([
+                ['Leadership and Ethical Governance', 'Operational Efficiency', 1, '<b>Vision, Mission, and Values</b> <br> <b>Ethical Behavior and Integrity</b> <br> <b>Code of Ethics</b> <br> <b>Governance Processes</b> <br> <b>Accountability, Transparency, and Fairness</b> <br> <b>Diversity and Inclusion</b>'],
+              
+              
+              ['Financial Performance and Management', 'Financial Stability and Performance', 1, '<b>Revenue Growth Strategies</b> <br> <b>Cost Management</b> <br> <b>Investment and Financing Decisions</b> <br> <b>Performance Metrics and Financial Ratios</b> <br> <b>Financial Planning and Budgeting</b> <br> <b>Risk Management</b>'],
+              
+              
+                ['Customer Focus and Value Creation', 'Customer Satisfaction and Loyalty', 1, '<b>Understanding Customer Needs</b> <br> <b>Customer Feedback Mechanisms</b> <br> <b>Value Creation</b> <br> <b>Customer Relationship Management</b> <br> <b>Customer Satisfaction Measurement</b> <br> <b>Innovation and Improvement Based on Customer Feedback</b>'],
+              
+              
+              ['Results-Driven Performance and Sustainability', 'Environmental Sustainability', 1, '<b>Performance Goals</b> <br> <b>Performance Measurement and Monitoring</b> <br> <b>Sustainability Practices</b> <br> <b>Continuous Improvement</b> <br> <b>Stakeholder Engagement</b> <br> <b>Long-Term Sustainability Planning</b>'],
+              
+              
+              ['Digital Innovation and Process Efficiency', 'Technological Advancement', 1, '<b>Digital Innovation Strategy</b> <br> <b>Process Efficiency and Quality Control</b> <br> <b>Risk Management in Digital Innovation</b> <br> <b>Digital Literacy and Training</b> <br> <b>Technological Adaptability and Innovation</b> <br> <b>Continuous Monitoring and Improvement</b>'],
+
+                
+              ['Innovation-Driven Strategic Planning', 'Innovation and Growth', 1, '<b>Strategic Planning Process</b> <br> <b>Strategic Goals and Objectives</b> <br> <b>Culture of Creativity and Continuous Learning</b> <br> <b>Resource Allocation for Innovation</b> <br> <b>Idea Generation and Implementation</b> <br> <b>Review and Assessment of the Strategic Plan</b>'],
+              
+              
+                ['Regulatory Compliance and Governance', 'Compliance and Ethical Standards', 1, '<b>Identifying Relevant Regulations</b> <br> <b>Developing Compliance Policies and Procedures</b> <br> <b>Training and Compliance Education</b> <br> <b>Compliance Monitoring and Auditing</b> <br> <b>Establishing Governance Structures</b> <br> <b>Ensuring Transparency and Accountability</b>'],
+              
+              
+              ['Workforce Engagement and Safety', 'Employee Well-being and Safety', 1, '<b>Open Communication and Collaboration</b> <br> <b>Employee Engagement Mechanisms</b> <br> <b>Occupational Health and Safety (OHS) Policies</b> <br> <b>Professional Development Opportunities</b> <br> <b>Diversity, Equity, and Inclusion (DEI)</b> <br> <b>Work-Life Balance and Employee Well-Being</b>'],
+                
+              
+              
+              
+     
+ 
+              
+              
+              
+              
+['Operational Efficiency', 'Economic Conditions', 2, 'Economic conditions affect operational efficiency through factors such as cost of resources, inflation rates, and market demand.<br><b>LETPR:</b> Leadership and Ethics Training Participation Rate<br><b>ECRRS:</b> Ethical Concerns Reporting Rate and Resolution Status<br><b>GAFR:</b> Governance Audit Frequency and Results<br><b>DI:</b> Diversity Index<br><b>COEAR:</b> Code of Ethics Adherence Rate<br><b>LEFFS:</b> Leadership Effectiveness and Fairness Feedback Score'],
+    ['Operational Efficiency', 'Competitor Actions', 2, 'Changes in competitor strategies and market dynamics can impact operational efficiency by affecting resource availability and demand.<br><b>SIPC:</b> Successful Innovation Projects Count<br><b>EEIIX:</b> Employee Engagement in Innovation Index<br><b>QEM:</b> Qualitative Employee Engagement Metrics Score<br><b>RIRP:</b> Return on Investment (ROI) from Innovation and R&D Projects'],
+    ['Innovation and Growth', 'Technology Disruptions', 2, 'Innovation and growth are heavily influenced by technological advancements, making them susceptible to disruptions in technology trends.<br><b>NMPIC:</b> New, Modified, and Improved Products/Services/Processes Count<br><b>SGAP:</b> Strategic Goal Alignment Percentage (Innovation, Ethics, Sustainability)<br><b>SIPC:</b> Successful Innovation Projects Count<br><b>EEIIX:</b> Employee Engagement in Innovation Index'],
+    ['Innovation and Growth', 'Regulations', 2, 'Compliance with regulatory standards can either facilitate or impede innovation and growth initiatives, depending on the industry and market.<br><b>QEM:</b> Qualitative Employee Engagement Metrics Score<br><b>RIRP:</b> Return on Investment (ROI) from Innovation and R&D Projects<br><b>CSERS:</b> Customer Satisfaction and Experience Scores/Ratings<br><b>CFCAR:</b> Customer Feedback Channel Availability and Response Rate'],
+    ['Customer Satisfaction and Loyalty', 'Economic Conditions', 2, 'Customer satisfaction and loyalty can be influenced by economic factors such as disposable income and consumer confidence.<br><b>CSERS:</b> Customer Satisfaction and Experience Scores/Ratings<br><b>CFCAR:</b> Customer Feedback Channel Availability and Response Rate<br><b>QVPM:</b> Quantitative Value Proposition Metrics<br><b>CDIIC:</b> Customer-Driven Improvements Implemented Count<br><b>QC:</b> Qualitative Customer Survey Results on Value, Satisfaction, Alignment<br><b>NPDC:</b> New Products/Services Developed based on Customer Feedback Percentage'],
+    ['Customer Satisfaction and Loyalty', 'Global Events', 2, 'Events like pandemics or geopolitical tensions can impact customer sentiment and loyalty, affecting businesses across industries.<br><b>CSERS:</b> Customer Satisfaction and Experience Scores/Ratings<br><b>CFCAR:</b> Customer Feedback Channel Availability and Response Rate<br><b>QVPM:</b> Quantitative Value Proposition Metrics<br><b>CDIIC:</b> Customer-Driven Improvements Implemented Count<br><b>QC:</b> Qualitative Customer Survey Results on Value, Satisfaction, Alignment<br><b>NPDC:</b> New Products/Services Developed based on Customer Feedback Percentage'],
+    ['Employee Well-being and Safety', 'Regulations', 2, 'Workplace safety regulations directly impact employee well-being and safety, ensuring compliance with health and safety standards.<br><b>EEESI:</b> Employee Engagement, Experience, and Satisfaction Indices<br><b>SINMF:</b> Safety Incidents and Near Misses Frequency and Severity<br><b>TEAEP:</b> Employee Training and Education Hours and Participation Rates<br><b>ETRR:</b> Employee Turnover and Retention Rates<br><b>ESRCCHSC:</b> Employee Survey Results on Communication, Collaboration, Health and Safety Culture<br><b>PDPPR:</b> Professional Development Program Participation Rate'],
+    ['Employee Well-being and Safety', 'Global Events', 2, 'Events such as natural disasters or public health crises can affect employee safety and well-being, necessitating crisis response measures.<br><b>EEESI:</b> Employee Engagement, Experience, and Satisfaction Indices<br><b>SINMF:</b> Safety Incidents and Near Misses Frequency and Severity<br><b>TEAEP:</b> Employee Training and Education Hours and Participation Rates<br><b>ETRR:</b> Employee Turnover and Retention Rates<br><b>ESRCCHSC:</b> Employee Survey Results on Communication, Collaboration, Health and Safety Culture<br><b>PDPPR:</b> Professional Development Program Participation Rate'],
+    ['Technological Advancement', 'Technology Disruptions', 2, 'The pace of technological advancement is influenced by disruptive innovations and emerging technologies, shaping the technological landscape.<br><b>DTIIC:</b> Digital Transformation Initiatives Implementation Count<br><b>PEQCM:</b> Process Efficiency and Quality Control Metrics<br><b>DSETPR:</b> Digital Skills and Ethics Training Participation Rate<br><b>NTDTAR:</b> New Technologies or Digital Tools Adoption Rate<br><b>ESRIIDE:</b> Employee Survey Results on Digital Innovation and Process Efficiency<br><b>POUDTP:</b> Processes Optimized using Digital Technologies Percentage'],
+    ['Technological Advancement', 'Competitor Actions', 2, 'Competitors\' technological investments and innovations drive advancements in the industry, impacting the technological advancement trajectory.<br><b>DTIIC:</b> Digital Transformation Initiatives Implementation Count<br><b>PEQCM:</b> Process Efficiency and Quality Control Metrics<br><b>DSETPR:</b> Digital Skills and Ethics Training Participation Rate<br><b>NTDTAR:</b> New Technologies or Digital Tools Adoption Rate<br><b>ESRIIDE:</b> Employee Survey Results on Digital Innovation and Process Efficiency<br><b>POUDTP:</b> Processes Optimized using Digital Technologies Percentage'],
+    ['Environmental Sustainability', 'Regulations', 2, 'Environmental regulations dictate sustainability practices and compliance requirements, shaping organizations\' sustainability efforts and initiatives.<br><b>PGATR:</b> Performance Goals and Targets Achievement Rate<br><b>SMP:</b> Sustainability Metrics Performance<br><b>SSSR:</b> Stakeholder Satisfaction Scores/Ratings<br><b>CIIC:</b> Continuous Improvement Initiatives Implemented Count<br><b>ESRRMPMSP:</b> Employee Survey Results on Performance Management and Sustainability Practices<br><b>SPSOA:</b> Strategic Performance and Sustainability Objectives Achievement Percentage'],
+    ['Environmental Sustainability', 'Global Events', 2, 'Environmental catastrophes or climate-related events can underscore the importance of environmental sustainability and drive organizational action.<br><b>PGATR:</b> Performance Goals and Targets Achievement Rate<br><b>SMP:</b> Sustainability Metrics Performance<br><b>SSSR:</b> Stakeholder Satisfaction Scores/Ratings<br><b>CIIC:</b> Continuous Improvement Initiatives Implemented Count<br><b>ESRRMPMSP:</b> Employee Survey Results on Performance Management and Sustainability Practices<br><b>SPSOA:</b> Strategic Performance and Sustainability Objectives Achievement Percentage'],
+    ['Compliance and Ethical Standards', 'Regulations', 2, 'Compliance with legal and ethical standards is a core aspect of regulatory compliance, guiding organizations\' adherence to ethical principles and standards.<br><b>IECFA:</b> Internal and External Compliance Audits Frequency and Results<br><b>RCIRR:</b> Reported Compliance Incidents Resolution Rate<br><b>CTCR:</b> Compliance Training Completion Rate<br><b>GSEM:</b> Governance Structure Effectiveness Metrics Score<br><b>ESRCP:</b> Employee Survey Results on Compliance and Governance Practices<br><b>CPCAURCR:</b> Compliance Policies and Controls Update Percentage in Response to Regulatory Changes'],
+    ['Compliance and Ethical Standards', 'Economic Conditions', 2, 'Economic fluctuations can impact compliance efforts, influencing resource allocation and organizational priorities.<br><b>IECFA:</b> Internal and External Compliance Audits Frequency and Results<br><b>RCIRR:</b> Reported Compliance Incidents Resolution Rate<br><b>CTCR:</b> Compliance Training Completion Rate<br><b>GSEM:</b> Governance Structure Effectiveness Metrics Score<br><b>ESRCP:</b> Employee Survey Results on Compliance and Governance Practices<br><b>CPCAURCR:</b> Compliance Policies and Controls Update Percentage in Response to Regulatory Changes'],
+    ['Financial Stability and Performance', 'Economic Conditions', 2, 'Financial stability and performance are directly influenced by economic factors such as interest rates, inflation, and market conditions.<br><b>FPM:</b> Financial Performance Metrics<br><b>RAEM:</b> Resource Allocation Efficiency Metrics<br><b>FSI:</b> Financial Stability Indicators<br><b>FACCR:</b> Financial Audits Conducted Count and Results<br><b>SSRFPM:</b> Stakeholder Survey Results on Financial Performance and Management<br><b>FGAAPCSTH:</b> Financial Goals Achievement Percentage Compared to Set Budget across All Areas of Operations, across Various Time Horizons'],
+    ['Financial Stability and Performance', 'Competitor Actions', 2, 'Competitors\' financial strategies and market performance can impact an organization\'s financial stability and performance, affecting market share and profitability.<br><b>FPM:</b> Financial Performance Metrics<br><b>RAEM:</b> Resource Allocation Efficiency Metrics<br><b>FSI:</b> Financial Stability Indicators<br><b>FACCR:</b> Financial Audits Conducted Count and Results<br><b>SSRFPM:</b> Stakeholder Survey Results on Financial Performance and Management<br><b>FGAAPCSTH:</b> Financial Goals Achievement Percentage Compared to Set Budget across All Areas of Operations, across Various Time Horizons'],
+
+              
+              
+              
+              
+              
+              
+              
+              
+                ['Economic Conditions', 'Short-term Resilience', 1, '<b>Considerations:</b><br>- Inflation rates<br>- Market demand<br>- Resource availability<br><br><b>Implications:</b><br>- Informs short-term resilience efforts<br>- Guides resource allocation and demand forecasting<br>- Influences pricing strategies and cost management'],
+    ['Competitor Actions', 'Short-term Resilience', 1, '<b>Considerations:</b><br>- Pricing strategies<br>- Product launches<br>- Market positioning<br><br><b>Implications:</b><br>- Identifies threats and opportunities<br>- Adjusts short-term resilience strategies<br>- Enhances market responsiveness and agility'],
+    ['Global Events', 'Short-term Resilience', 1, '<b>Considerations:</b><br>- Natural disasters<br>- Pandemics<br>- Geopolitical tensions<br><br><b>Implications:</b><br>- Addresses supply chain disruptions<br>- Manages workforce availability<br>- Implements operational continuity measures'],
+    ['Regulations', 'Long-term Sustainability', 1, '<b>Considerations:</b><br>- Environmental regulations<br>- Labor laws<br>- Industry standards<br><br><b>Implications:</b><br>- Promotes long-term sustainability goals<br>- Ensures compliance with legal and ethical standards<br>- Guides strategic decision-making'],
+    ['Technology Disruptions', 'Long-term Sustainability', 1, '<b>Considerations:</b><br>- Automation advancements<br>- Digitalization trends<br>- Artificial intelligence innovations<br><br><b>Implications:</b><br>- Adapts business processes and workflows<br>- Invests in innovative technologies<br>- Upskills workforce for technological proficiency'],
+                
+                
+                
+              
+              
+              
+              
+                ['Short-term Resilience', 'Business Continuity', 1, '<b>Objective:</b><br>- Ensures uninterrupted business operations.<br><b>Actions:</b><br>- Develops contingency plans.<br>- Implements redundant systems.<br>- Establishes emergency response protocols.'],
+    ['Short-term Resilience', 'Crisis Response Effectiveness', 1, '<b>Objective:</b><br>- Responds effectively to crises and emergencies.<br><b>Actions:</b><br>- Conducts crisis simulations.<br>- Trains response teams.<br>- Establishes communication channels.'],
+    ['Short-term Resilience', 'Supply Chain Adaptability', 1, '<b>Objective:</b><br>- Adapts supply chain to dynamic conditions.<br><b>Actions:</b><br>- Diversifies supplier base.<br>- Implements flexible logistics.<br>- Monitors inventory levels closely.'],
+    ['Short-term Resilience', 'Workforce Flexibility', 1, '<b>Objective:</b><br>- Adapts workforce to changing demands.<br><b>Actions:</b><br>- Implements remote work policies.<br>- Cross-trains employees.<br>- Offers flexible scheduling options.'],
+    ['Short-term Resilience', 'Financial Solvency', 1, '<b>Objective:</b><br>- Maintains financial stability and liquidity.<br><b>Actions:</b><br>- Builds cash reserves.<br>- Negotiates payment terms.<br>- Explores financing options.'],
+    ['Short-term Resilience', 'Market Share Stability', 1, '<b>Objective:</b><br>- Preserves market share amidst disruptions.<br><b>Actions:</b><br>- Launches targeted marketing campaigns.<br>- Enhances customer support.<br>- Explores new distribution channels.'],
+    ['Short-term Resilience', 'Brand Reputation (short-term)', 1, '<b>Objective:</b><br>- Safeguards brand image during crises.<br><b>Actions:</b><br>- Monitors social media and news coverage.<br>- Issues timely responses and statements.<br>- Engages with stakeholders proactively.'],
+              
+              
+ ['Long-term Sustainability', 'Financial Health', 1, '<b>Objective:</b><br>- Ensures financial stability and growth.<br><b>Actions:</b><br>- Invests in long-term assets.<br>- Diversifies revenue streams.<br>- Manages debt levels responsibly.'],
+    ['Long-term Sustainability', 'Innovation Pipeline', 1, '<b>Objective:</b><br>- Sustains innovation for long-term growth.<br><b>Actions:</b><br>- Invests in research and development.<br>- Cultivates a culture of innovation.<br>- Explores new market opportunities.'],
+    ['Long-term Sustainability', 'Brand Reputation (long-term)', 1, '<b>Objective:</b><br>- Builds a strong and enduring brand reputation.<br><b>Actions:</b><br>- Maintains consistent brand messaging.<br>- Delivers high-quality products/services.<br>- Engages in corporate social responsibility initiatives.'],
+    ['Long-term Sustainability', 'Workforce Adaptability', 1, '<b>Objective:</b><br>- Builds a flexible and resilient workforce.<br><b>Actions:</b><br>- Invests in employee training and development.<br>- Promotes a culture of learning and adaptability.<br>- Offers opportunities for career growth and advancement.'],
+    ['Long-term Sustainability', 'Resource Efficiency', 1, '<b>Objective:</b><br>- Maximizes resource utilization and minimizes waste.<br><b>Actions:</b><br>- Implements sustainable production practices.<br>- Invests in energy-efficient technologies.<br>- Reduces environmental footprint.'],
+    ['Long-term Sustainability', 'Customer Loyalty', 1, '<b>Objective:</b><br>- Builds long-lasting relationships with customers.<br><b>Actions:</b><br>- Provides exceptional customer service.<br>- Offers personalized experiences.<br>- Rewards loyal customers.'],
+    ['Long-term Sustainability', 'Stakeholder Confidence', 1, '<b>Objective:</b><br>- Earns trust and confidence from stakeholders.<br><b>Actions:</b><br>- Maintains transparent communication.<br>- Upholds ethical business practices.<br>- Delivers on promises and commitments.'],
+    ['Long-term Sustainability', 'Regulatory Compliance', 1, '<b>Objective:</b><br>- Ensures adherence to regulatory requirements.<br><b>Actions:</b><br>- Regularly monitors regulatory changes.<br>- Updates policies and procedures accordingly.<br>- Conducts compliance training programs.']
+            ]);
+
+            var options = {
+             
+                height: 600,
+                sankey: {
+                    node: {
+                        width: 15,
+                        nodePadding: 10,
+                        label: {
+                            fontSize: 12,
+                            color: '#000',
+                            bold: true,
+                            italic: false
+                        },
+                        interactivity: true
+                    },
+                    link: {
+                        colorMode: 'gradient',
+                        colors: ['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c']
+                    }
+                },
+                tooltip: {
+                    isHtml: true
+                }
+            };
+
+            var chart = new google.visualization.Sankey(document.getElementById('sankey_diagram'));
+            chart.draw(data, options);
+        }
+      function createTooltipContent(title, items) {
+    var content = '<strong>' + title + '</strong><ul>';
+    items.forEach(function(item) {
+        content += '<li>' + item + '</li>';
+    });
+    content += '</ul>';
+    return content;
+}
+    </script>
+</head>
+<body>
+    <div id="sankey_diagram" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
